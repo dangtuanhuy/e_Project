@@ -1,6 +1,6 @@
-
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>AutoWorld</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -11,42 +11,43 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<style>
-	* {
-		font-family: 'Roboto', sans-serif;
-	}
-</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".dropdown img.flag").addClass("flagvisibility");
-
-		$(".dropdown dt a").click(function() {
-			$(".dropdown dd ul").toggle();
-		});
-
-		$(".dropdown dd ul li a").click(function() {
-			var text = $(this).html();
-			$(".dropdown dt a span").html(text);
-			$(".dropdown dd ul").hide();
-			$("#result").html("Selected value is: " + getSelectedValue("sample"));
-		});
-
-		function getSelectedValue(id) {
-			return $("#" + id).find("dt a span.value").html();
+		* {
+			font-family: 'Roboto', sans-serif;
 		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".dropdown img.flag").addClass("flagvisibility");
 
-		$(document).bind('click', function(e) {
-			var $clicked = $(e.target);
-			if (! $clicked.parents().hasClass("dropdown"))
+			$(".dropdown dt a").click(function() {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function() {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
 				$(".dropdown dd ul").hide();
-		});
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function(e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
 
 
-		$("#flagSwitcher").click(function() {
-			$(".dropdown img.flag").toggleClass("flagvisibility");
+			$("#flagSwitcher").click(function() {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
 		});
-	});
-</script>
+	</script>
 </head>
+
 <body>
 	<div class="header-bg">
 		<div class="wrap">
@@ -76,14 +77,14 @@
 										<li><a href="#"><span>$</span>Dollar</a></li>
 										<li><a href="#"><span>€</span>Euro</a></li>
 									</ul>
-								</ul>		
-							</div> 
+								</ul>
+							</div>
 							<div class="clear"></div>
 						</div>
 						<div class="clear"></div>
 						<div class="header-bot">
 							<div class="logo">
-								<a href="index.html"><img src="images/logo.png" alt=""/></a>
+								<a href="index.html"><img src="images/logo/logo.png" alt=""/></a>
 							</div>
 							<div class="cart">
 								<ul class="ph-no">
@@ -102,12 +103,12 @@
 										<a href="" class="details"></a>
 									</div>
 									<a data-id="43;" class="button addToCart"><span>Cart</span></a>
-									<div class="clear"></div> 
+									<div class="clear"></div>
 								</div>
-							</div>					
-							<div class="clear"></div> 
+							</div>
+							<div class="clear"></div>
 						</div>
-					</div>	
+					</div>
 					<!-- Lmint navbar -->
 					<nav class="navbar navbar-inverse navbar-fixed-top">
 						<div class="container-fluid">
@@ -117,12 +118,12 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="#">Cobe-Shop</a>
+								<a class="navbar-brand" href="index.html">AutoWorld</a>
 							</div>
 							<div class="collapse navbar-collapse" id="myNavbar">
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="specials.html">Special</a></li>
+									<li class="active"><a href="index.html">Home Page</a></li>
+									<li><a href="specials.html">Catelogue</a></li>
 									<!-- <li class="dropdown">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
 										<ul class="dropdown-menu">
@@ -131,8 +132,9 @@
 											<li><a href="#">Page 1-3</a></li>
 										</ul>
 									</li> -->
-									<li><a href="single.html">Contact</a></li>
-									<li><a href="about.html">About</a></li>
+									<li><a href="about.html">Company</a></li>
+									<li><a href="contact">Contact</a></li>
+									<li><a href="single.html">Branks</a></li>
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -145,7 +147,7 @@
 					<div class="content-top">
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="span4">
-								<img src="images/pic.jpg" alt=""/>
+								<img src="images/pic.jpg" alt="" />
 								<div class="item_html">
 									<div class="banner-box3">
 										<span class="text20">Free Shipping</span>
@@ -157,7 +159,7 @@
 						</div>
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="span4">
-								<img src="images/pic1.jpg" alt=""/>
+								<img src="images/pic1.jpg" alt="" />
 								<div class="item_html">
 									<div class="banner-box3">
 										<span class="text20">Free Shipping</span>
@@ -169,7 +171,7 @@
 						</div>
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="span4">
-								<img src="images/pic2.jpg" alt=""/>
+								<img src="images/pic2.jpg" alt="" />
 								<div class="item_html">
 									<div class="banner-box3">
 										<span class="text20">Free Shipping</span>
@@ -179,120 +181,132 @@
 								</div>
 							</div>
 						</div>
-						<div class="clear"></div> 
+						<div class="clear"></div>
 					</div>
 					<div class="content-bottom">
 						<div class="cont span_2_of_3">
 							<h4><span>Featured products</span></h4>
 							<div class="grid-bottom">
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids "> 
-										<img src="images/pic3.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic3.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids "> 
-										<img src="images/pic4.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic4.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom1">
-									<a href="single.html"><div class="grids "> 
-										<img src="images/pic5.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic5.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
-								<div class="clear"></div> 
+								<div class="clear"></div>
 							</div>
 							<div class="grid-bottom">
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids "> 
-										<img src="images/pic6.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic6.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids "> 
-										<img src="images/pic7.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic7.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom1">
-									<a href="single.html"><div class="grids "> 
-										<img src="images/pic8.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic8.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
-								<div class="clear"></div> 
+								<div class="clear"></div>
 							</div>
-						</div>				    
+						</div>
 						<div class="rsidebar span_1_of_3">
 							<div class="sidebar">
 								<h4 class="title_block"><span>New products</span></h4>
@@ -310,7 +324,7 @@
 										</p>
 										<a href="#" class="link-cart">Read More</a>
 									</div>
-									<div class="clear"></div> 
+									<div class="clear"></div>
 								</div>
 							</div>
 							<div class="sidebar">
@@ -328,7 +342,7 @@
 										</p>
 										<a href="#" class="link-cart">Read More</a>
 									</div>
-									<div class="clear"></div> 
+									<div class="clear"></div>
 								</div>
 							</div>
 							<div class="sidebar1">
@@ -346,11 +360,11 @@
 										</p>
 										<a href="#" class="link-cart">Read More</a>
 									</div>
-									<div class="clear"></div> 
+									<div class="clear"></div>
 								</div>
 							</div>
 						</div>
-						<div class="clear"></div> 
+						<div class="clear"></div>
 					</div>
 					<div class="footer">
 						<div class="section group">
@@ -394,7 +408,7 @@
 								</ul>
 								<p> &copy; e_Project ACCP I17 <a href="#">Đặng Tuấn Huy - Lưu Minh Thông</a></p>
 							</div>
-							<div class="clear"></div> 
+							<div class="clear"></div>
 						</div>
 					</div>
 				</div>
@@ -402,7 +416,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
-
-
-

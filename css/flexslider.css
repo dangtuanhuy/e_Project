@@ -1,5 +1,5 @@
 /* FlexSlider Necessary Styles
-*********************************/ 
+*********************************/
 .flexslider {margin: 0; padding: 0;}
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {width: 100%; display: block;}
@@ -20,10 +20,10 @@
 	margin: -20px 0 0;
 	display: block;
 	background: url(../images/p-but.png) no-repeat 0 0;
-	position: absolute; 
-	top:45%; z-index: 10; 
+	position: absolute;
+	top:45%; z-index: 10;
 	cursor: pointer;
-	text-indent: -9999px; 
+	text-indent: -9999px;
 	opacity: 0; -webkit-transition: all .3s ease;
 }
 .flex-direction-nav .flex-next {background-position: 100% 0; right: -36px; }
@@ -69,11 +69,3 @@
 @media screen and (max-width: 500px) {
   header h1 {width: 246px;  }
 }
-
-
-
-
-
-
-
-
