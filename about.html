@@ -1,6 +1,6 @@
-
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>AutoWorld</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -12,45 +12,46 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<style>
-	* {
-		font-family: 'Roboto', sans-serif;
-	}
-</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".dropdown img.flag").addClass("flagvisibility");
-
-		$(".dropdown dt a").click(function() {
-			$(".dropdown dd ul").toggle();
-		});
-		
-		$(".dropdown dd ul li a").click(function() {
-			var text = $(this).html();
-			$(".dropdown dt a span").html(text);
-			$(".dropdown dd ul").hide();
-			$("#result").html("Selected value is: " + getSelectedValue("sample"));
-		});
-		
-		function getSelectedValue(id) {
-			return $("#" + id).find("dt a span.value").html();
+		* {
+			font-family: 'Roboto', sans-serif;
 		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".dropdown img.flag").addClass("flagvisibility");
 
-		$(document).bind('click', function(e) {
-			var $clicked = $(e.target);
-			if (! $clicked.parents().hasClass("dropdown"))
+			$(".dropdown dt a").click(function() {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function() {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
 				$(".dropdown dd ul").hide();
-		});
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function(e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
 
 
-		$("#flagSwitcher").click(function() {
-			$(".dropdown img.flag").toggleClass("flagvisibility");
+			$("#flagSwitcher").click(function() {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
 		});
-	});
-</script>
+	</script>
 </head>
+
 <body ng-app="myApp" ng-controller="MyController">
 	<div class="header-bg">
-		<div class="wrap"> 
+		<div class="wrap">
 			<div class="h-bg">
 				<div class="total">
 					<div class="bot2"></div>
@@ -77,8 +78,8 @@
 										<li><a href="#"><span>$</span>Dollar</a></li>
 										<li><a href="#"><span>€</span>Euro</a></li>
 									</ul>
-								</ul>		
-							</div> 
+								</ul>
+							</div>
 							<div class="clear"></div>
 						</div>
 						<div class="clear"></div>
@@ -139,45 +140,45 @@
 								<line class="cls-6" y1="23.61" x2="101.39" y2="24.03"/>
 								<text class="cls-7" transform="translate(4.09 37.38)">Gi<tspan class="cls-8" x="11.48" y="0">v</tspan><tspan x="17.54" y="0">e </tspan><tspan class="cls-9" x="27.09" y="0">y</tspan><tspan class="cls-10" x="33.14" y="0">ou the best</tspan></text>
 							</svg>
-						</div>
-						<div class="cart">
-							<ul class="ph-no">
-								<li class="item  first_item">
-									<div class="item_html">
-										<span class="text1">Order delivery:</span>
-										<span class="text2">+800-0005-5289</span>
-									</div>
-								</li>
-							</ul>
-							<div class="login">
-								<span><a href="#"><img src="images/login.png" alt="" title="login"></a></span>
 							</div>
-							<div class="cart-desc">
-								<div class="details-list">
-									<a href="" class="details"></a>
+							<div class="cart">
+								<ul class="ph-no">
+									<li class="item  first_item">
+										<div class="item_html">
+											<span class="text1">Order delivery:</span>
+											<span class="text2">+800-0005-5289</span>
+										</div>
+									</li>
+								</ul>
+								<div class="login">
+									<span><a href="#"><img src="images/login.png" alt="" title="login"></a></span>
 								</div>
-								<a data-id="43;" class="button addToCart"><span>Cart</span></a>
-								<div class="clear"></div> 
+								<div class="cart-desc">
+									<div class="details-list">
+										<a href="" class="details"></a>
+									</div>
+									<a data-id="43;" class="button addToCart"><span>Cart</span></a>
+									<div class="clear"></div>
+								</div>
 							</div>
-						</div>					
-						<div class="clear"></div> 
+							<div class="clear"></div>
+						</div>
 					</div>
-				</div>	
-				<!-- Lmint navbar -->
-				<nav class="navbar navbar-inverse navbar-fixed-top">
-					<div class="container-fluid">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<!--  navbar -->
+					<nav class="navbar navbar-inverse navbar-fixed-top">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="#"><span class="mybrand">AutoWorld</span></a>
-						</div>
-						<div class="collapse navbar-collapse" id="myNavbar">
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="specials.html">Special</a></li>
+								<a class="navbar-brand" href="#"><span class="mybrand">AutoWorld</span></a>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="index.html">Home</a></li>
+									<li><a href="specials.html">Special</a></li>
 									<!-- <li class="dropdown">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
 										<ul class="dropdown-menu">
@@ -186,7 +187,8 @@
 											<li><a href="#">Page 1-3</a></li>
 										</ul>
 									</li> -->
-									<li><a href="single.html">Contact</a></li>
+									<li><a href="single.html">Catalouge</a></li>
+									<li><a href="contact.html">Contact</a></li>
 									<li><a href="about.html">About</a></li>
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
@@ -196,9 +198,9 @@
 							</div>
 						</div>
 					</nav>
-					<!-- End Lmint navbar -->
+					<!-- Endnavbar -->
 					<div class="content-bottom">
-						<div class="about-top-pagination"> 
+						<div class="about-top-pagination">
 							<ul>
 								<li><a href="#">Home \</a></li>
 								<li><a href="#"><span>About us</span></a></li>
@@ -219,35 +221,45 @@
 								<div class="historey-lines">
 									<ul>
 										<li><span>2010 &nbsp;-</span></li>
-										<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
+										<li>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p>
+										</li>
 										<div class="clear"> </div>
 									</ul>
 								</div>
 								<div class="historey-lines">
 									<ul>
 										<li><span>2010 &nbsp;-</span></li>
-										<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
+										<li>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p>
+										</li>
 										<div class="clear"> </div>
 									</ul>
 								</div>
 								<div class="historey-lines">
 									<ul>
 										<li><span>2010 &nbsp;-</span></li>
-										<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
+										<li>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p>
+										</li>
 										<div class="clear"> </div>
 									</ul>
 								</div>
 								<div class="historey-lines">
 									<ul>
 										<li><span>2010 &nbsp;-</span></li>
-										<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
+										<li>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p>
+										</li>
 										<div class="clear"> </div>
 									</ul>
 								</div>
 								<div class="historey-lines">
 									<ul>
 										<li><span>2010 &nbsp;-</span></li>
-										<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p></li>
+										<li>
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.</p>
+										</li>
 										<div class="clear"> </div>
 									</ul>
 								</div>
@@ -256,7 +268,8 @@
 							<div class="about-services">
 								<h3>our services</h3>
 								<h5>LOREM IPM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT. PRAESENT VESTIBULUM.</h5>
-								<p>Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Morbi nunc odio, gida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros.</p>
+								<p>Praesent vestibulum molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Morbi nunc odio, gida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada
+									orci. Donec sit amet eros.</p>
 								<ul>
 									<li><a href="#"><img src="images/marker1.png"> consectetur adipisicing elit</a></li>
 									<li><a href="#"><img src="images/marker1.png"> sed do eiusmod tempor incididunt</a></li>
@@ -330,7 +343,7 @@
 								</ul>
 								<p> &copy; e_Project ACCP I17 <a href="#">Đặng Tuấn Huy - Lư Minh Thông</a></p>
 							</div>
-							<div class="clear"></div> 
+							<div class="clear"></div>
 						</div>
 					</div>
 				</div>
@@ -343,7 +356,5 @@
 	<script src="js/charming.js"></script>
 	<script src="js/myscript.js"></script>
 </body>
+
 </html>
-
-
-
