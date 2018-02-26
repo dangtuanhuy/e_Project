@@ -1,6 +1,6 @@
-
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>AutoWorld</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -12,65 +12,68 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/anime.css">
 	<style>
-	* {
-		font-family: 'Roboto', sans-serif;
-	}
-</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".dropdown img.flag").addClass("flagvisibility");
-
-		$(".dropdown dt a").click(function() {
-			$(".dropdown dd ul").toggle();
-		});
-
-		$(".dropdown dd ul li a").click(function() {
-			var text = $(this).html();
-			$(".dropdown dt a span").html(text);
-			$(".dropdown dd ul").hide();
-			$("#result").html("Selected value is: " + getSelectedValue("sample"));
-		});
-
-		function getSelectedValue(id) {
-			return $("#" + id).find("dt a span.value").html();
+		* {
+			font-family: 'Roboto', sans-serif;
 		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".dropdown img.flag").addClass("flagvisibility");
 
-		$(document).bind('click', function(e) {
-			var $clicked = $(e.target);
-			if (! $clicked.parents().hasClass("dropdown"))
+			$(".dropdown dt a").click(function() {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function() {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
 				$(".dropdown dd ul").hide();
-		});
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
 
-
-		$("#flagSwitcher").click(function() {
-			$(".dropdown img.flag").toggleClass("flagvisibility");
-		});
-	});
-</script>
-<!--slider-->
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script src="js/modernizr.js"></script>
-<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>-->
-<!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
-<!-- FlexSlider -->
-<script defer src="js/jquery.flexslider.js"></script>
-<script type="text/javascript">
-	$(function(){
-		SyntaxHighlighter.all();
-	});
-	$(window).load(function(){
-		$('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-				$('body').removeClass('loading');
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
 			}
+
+			$(document).bind('click', function(e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
+
+
+			$("#flagSwitcher").click(function() {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
 		});
-	});
-</script>
+	</script>
+	<!--slider-->
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="js/modernizr.js"></script>
+	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>-->
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')
+	</script>
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			SyntaxHighlighter.all();
+		});
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function(slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
 </head>
+
 <body>
 	<div class="header-bg">
 		<div class="wrap">
@@ -168,80 +171,88 @@
 								<text class="cls-7" transform="translate(4.09 37.38)">Gi<tspan class="cls-8" x="11.48" y="0">v</tspan><tspan x="17.54" y="0">e </tspan><tspan class="cls-9" x="27.09" y="0">y</tspan><tspan class="cls-10" x="33.14" y="0">ou the best</tspan></text>
 							</svg>
 
-						</div>
-						<div class="cart">
-							<ul class="ph-no">
-								<li class="item  first_item">
-									<div class="item_html">
-										<span class="text1">Order delivery:</span>
-										<span class="text2">+800-0005-5289</span>
-									</div>
-								</li>
-							</ul>
-							<div class="login">
-								<span><a href="#"><img src="images/login.png" alt="" title="login"></a></span>
 							</div>
-							<div class="cart-desc">
-								<div class="details-list">
-									<a href="" class="details"></a>
+							<div class="cart">
+								<ul class="ph-no">
+									<li class="item  first_item">
+										<div class="item_html">
+											<span class="text1">Order delivery:</span>
+											<span class="text2">+800-0005-5289</span>
+										</div>
+									</li>
+								</ul>
+								<div class="login">
+									<span><a href="#"><img src="images/login.png" alt="" title="login"></a></span>
 								</div>
-								<a data-id="43;" class="button addToCart"><span>Cart</span></a>
-								<div class="clear"></div>
+								<div class="cart-desc">
+									<div class="details-list">
+										<a href="" class="details"></a>
+									</div>
+									<a data-id="43;" class="button addToCart"><span>Cart</span></a>
+									<div class="clear"></div>
+								</div>
 							</div>
+							<div class="clear"></div>
 						</div>
-						<div class="clear"></div>
 					</div>
-				</div>
-<!--  navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<!--  navbar -->
+					<nav class="navbar navbar-inverse navbar-fixed-top">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-			<a class="navbar-brand" href="#"><span class="mybrand">AutoWorld</span></a>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="specials.html">Special</a></li>
-				<!-- <li class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+								<a class="navbar-brand" href="#"><span class="mybrand">AutoWorld</span></a>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="index.html">Home</a></li>
+
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown">Cars<span class="caret"></span></a>
 										<ul class="dropdown-menu">
-											<li><a href="#">Page 1-1</a></li>
-											<li><a href="#">Page 1-2</a></li>
-											<li><a href="#">Page 1-3</a></li>
+											<li><a href="#">Innova</a></li>
+											<li><a href="#">Hyundai</a></li>
+											<li><a href="#">Others</a></li>
 										</ul>
-									</li> -->
-				<li><a href="single.html">Catalouge</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<!-- Endnavbar -->
+									</li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown">Motos<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Honda</a></li>
+											<li><a href="#">Suzuki</a></li>
+											<li><a href="#">Others</a></li>
+										</ul>
+									</li>
+
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="about.html">About</a></li>
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="#"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>SignIn</a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<!-- Endnavbar -->
 					<div class="banner">
 						<section class="slider">
 							<div class="flexslider">
 								<ul class="slides">
 									<li>
-										<img src="images/banner2.jpg" alt=""/>
+										<img src="images/banner2.jpg" alt="" />
 									</li>
 									<li>
-										<img src="images/banner4.jpg"  alt=""/>
+										<img src="images/banner4.jpg" alt="" />
 									</li>
 									<li>
-										<img src="images/banner3.jpg"  alt=""/>
+										<img src="images/banner3.jpg" alt="" />
 									</li>
 									<li>
-										<img src="images/banner1.jpg"  alt=""/>
+										<img src="images/banner1.jpg" alt="" />
 									</li>
 								</ul>
 							</div>
@@ -250,7 +261,7 @@
 					<div class="content-top">
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="span4">
-								<img src="images/pic.jpg" alt=""/>
+								<img src="images/pic.jpg" alt="" />
 								<div class="item_html">
 									<div class="banner-box3">
 										<span class="text20">Free Shipping</span>
@@ -262,7 +273,7 @@
 						</div>
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="span4">
-								<img src="images/pic1.jpg" alt=""/>
+								<img src="images/pic1.jpg" alt="" />
 								<div class="item_html">
 									<div class="banner-box3">
 										<span class="text20">Free Shipping</span>
@@ -274,7 +285,7 @@
 						</div>
 						<div class="col_1_of_3 span_1_of_3">
 							<div class="span4">
-								<img src="images/pic2.jpg" alt=""/>
+								<img src="images/pic2.jpg" alt="" />
 								<div class="item_html">
 									<div class="banner-box3">
 										<span class="text20">Free Shipping</span>
@@ -291,109 +302,121 @@
 							<h4><span>Featured products</span></h4>
 							<div class="grid-bottom">
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids ">
-										<img src="images/pic3.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic3.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids ">
-										<img src="images/Lamborghini's.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/Lamborghini's.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom1">
-									<a href="single.html"><div class="grids ">
-										<img src="images/pic5.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic5.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="clear"></div>
 							</div>
 							<div class="grid-bottom">
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids ">
-										<img src="images/pic6.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic6.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom">
-									<a href="single.html"><div class="grids ">
-										<img src="images/pic7.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic7.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="col_1_of_b span_1_of_bottom1">
-									<a href="single.html"><div class="grids ">
-										<img src="images/pic8.jpg" alt=""/>
-										<div class="price">
-											<div class="bot1">
-												<p class="title" style="height: 38px;">Loremipsum</p>
-												<div class="price1" style="height: 19px;">
-													<span class="actual">$12.00</span>
+									<a href="single.html">
+										<div class="grids ">
+											<img src="images/pic8.jpg" alt="" />
+											<div class="price">
+												<div class="bot1">
+													<p class="title" style="height: 38px;">Loremipsum</p>
+													<div class="price1" style="height: 19px;">
+														<span class="actual">$12.00</span>
+													</div>
 												</div>
+												<div class="cart1">
+													<img src="images/cart.png" alt="" />
+												</div>
+												<div class="clear"></div>
 											</div>
-											<div class="cart1">
-												<img src="images/cart.png" alt=""/>
-											</div>
-											<div class="clear"></div>
 										</div>
-									</div></a>
+									</a>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -497,7 +520,7 @@
 									<li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
 									<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
 								</ul>
-								<p> &copy; e_Project ACCP I17 <a href="#">Đặng Tuấn Huy - Lư Minh Thông</a></p>
+								<p> &copy; e_Project ACCP I17 <a href="index.html">Đặng Tuấn Huy - Lư Minh Thông</a></p>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -510,4 +533,5 @@
 	<script src="js/anime.js"></script>
 	<script src="js/myscript.js"></script>
 </body>
+
 </html>
