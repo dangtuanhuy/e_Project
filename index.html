@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/anime.css">
@@ -231,8 +232,8 @@
 									<li><a href="about.html">About</a></li>
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#"><span class="glyphicon glyphicon-user"></span>Register</a></li>
-									<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>SignIn</a></li>
+									<li><a data-toggle="modal" data-target="#modalRegister"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+									<li><a data-toggle="modal" data-target="#modalRegister1"><span class="glyphicon glyphicon-user"></span>SignIn</a></li>
 								</ul>
 							</div>
 						</div>
@@ -529,6 +530,99 @@
 			</div>
 		</div>
 	</div>
+	<!-- Register -->
+	<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h1 class="modal-title" id="exampleModalLabel" text-align="center">REGISTER</h1>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form class="ho">
+	          <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Username:</label>
+	            <input type="text" class="form-control" id="txtUser">
+	          </div>
+	          <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Full Names:</label>
+	            <input type="text" class="form-control" id="txtName">
+	          </div>
+	          <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Date of Birth:</label>
+	            <input type="date" class="form-control" id="txtdate">
+	          </div>
+	          <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Email:</label>
+	            <input type="email" class="form-control" id="txtMail">
+	          </div>
+	          <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Phone:</label>
+	            <input type="text" class="form-control" id="txtPhone">
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="col-form-label">Address:</label>
+	            <textarea class="form-control" id="txtAddress" name="txtAddress"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Register</button>
+	      </div>
+	    </div>
+	  </div>
+	  <script type="text/javascript">
+	  	CKEDITOR.replace('txtAddress');
+	  </script>
+		<!-- END -->
+		<!-- login -->
+		<div class="modal fade" id="modalRegister1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="exampleModalLabel" text-align="center">Login</h1>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form class="ho">
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">Username:</label>
+								<input type="text" class="form-control" id="txtUser">
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">Full Names:</label>
+								<input type="text" class="form-control" id="txtName">
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">Date of Birth:</label>
+								<input type="date" class="form-control" id="txtdate">
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">Email:</label>
+								<input type="email" class="form-control" id="txtMail">
+							</div>
+							<div class="form-group">
+								<label for="recipient-name" class="col-form-label">Phone:</label>
+								<input type="text" class="form-control" id="txtPhone">
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">Address:</label>
+								<textarea class="form-control" id="txtAddress" name="txtAddress"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Register</button>
+					</div>
+				</div>
+			</div>
+		<!-- end -->
 	<script src="js/charming.js"></script>
 	<script src="js/anime.js"></script>
 	<script src="js/myscript.js"></script>
