@@ -5,3 +5,9 @@ span {
 #Layer_1 {
 	height: 100px;
 }
+
+.search-box {
+	width: 500px;
+	float: right;
+	margin-right: 50px;
+}
