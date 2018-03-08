@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/anime.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<style>
 		* {
@@ -218,55 +219,19 @@
 						<div class="about-top">
 							<div class="about-topgrids">
 								<div class="about-topgrid1">
-									<h3>Who We Are</h3>
-									<img src="images/Catalog/Cars/Innova/7.png" title="name">
-									<h5>AUTOWORLD</h5>
-									<p>AutoWorld is a company that deals with all types of cars and motors. They started off with a company in collaboration with "GOOD YEAR” and then build up their own establishment. They have different showrooms for different brands at various locations in the city and because of their services they have attracted a vast number of Customers in very short duration of time.</p>
+									<h3>{{titlee}}</h3>
+									<img src="{{img1}}" title="name">
+									<h5>{{title1h5}}</h5>
+									<p>{{content1}}</p>
 								</div>
 							</div>
 							<div class="about-histore">
-								<h3>Our History</h3>
-								<div class="historey-lines">
+								<h3>{{title2}}</h3>
+								<div class="historey-lines" ng-repeat="x in listyear">
 									<ul>
-										<li><span>2010 &nbsp;-</span></li>
+										<li><span>{{x.year}} &nbsp;-</span></li>
 										<li>
-											<p>The company was founded and developed. The company started to distribute from this car. Car provider for companies is the car maker honda</p>
-										</li>
-										<div class="clear"> </div>
-									</ul>
-								</div>
-								<div class="historey-lines">
-									<ul>
-										<li><span>2012 &nbsp;-</span></li>
-										<li>
-											<p>The company continues to grow with more than stock. The company began selling car Suzuki. The company opened a new branch to develop</p>
-										</li>
-										<div class="clear"> </div>
-									</ul>
-								</div>
-								<div class="historey-lines">
-									<ul>
-										<li><span>2014 &nbsp;-</span></li>
-										<li>
-											<p>The company suffered heavy losses due to the competition from other companies. The company tries to grow instead of closed companies</p>
-										</li>
-										<div class="clear"> </div>
-									</ul>
-								</div>
-								<div class="historey-lines">
-									<ul>
-										<li><span>2016 &nbsp;-</span></li>
-										<li>
-											<p>Due to the high flexibility, the company regained initial capital. The company continues to ignore from the car maker in other motos as SYM, China</p>
-										</li>
-										<div class="clear"> </div>
-									</ul>
-								</div>
-								<div class="historey-lines">
-									<ul>
-										<li><span>2018 &nbsp;-</span></li>
-										<li>
-											<p>The company thrived. The company started selling the car type. Company to open new branches a lot more.</p>
+											<p>{{x.yearevent}}</p>
 										</li>
 										<div class="clear"> </div>
 									</ul>
@@ -274,19 +239,12 @@
 								<div class="clear"> </div>
 							</div>
 							<div class="about-services">
-								<h3>our services</h3>
-								<h5>AUTOWORLD</h5>
-								<p>The company with service and maintenance mode the car quite well. Incentives of many customers. With the customer will have a discount for the purchase</p>
+								<h3>{{title3}}</h3>
+								<h5>{{title1h5}}</h5>
+								<p>{{content2}}</p>
 								<ul>
-									<li><a href="about.html"><img src="images/marker1.png"> Maintenance deadlines</a></li>
-									<li><a href="about.html"><img src="images/marker1.png"> Giving gifts on birthdays</a></li>
-									<li><a href="about.html"><img src="images/marker1.png"> Gift gasoline and lubricant</a></li>
-									<li><a href="about.html"><img src="images/marker1.png"> Good check</a></li>
-									<li><a href="#"><img src="images/marker1.png"> Interesting promotions</a></li>
-									<li><a href="about.html"><img src="images/marker1.png"> 20% reduction for the next car purchase</a></li>
-									<li><a href="about.html"><img src="images/marker1.png"> 15% discount when shopping online</a></li>
-									<li><a href="about.html"><img src="images/marker1.png"> 5% discount when buying car insurance</a></li>
-									<div class="clear"> </div>
+									<li ng-repeat="y in sub"><a href="about.html"><img src="images/marker1.png">{{y.text}}</a></li>
+									<div class="clear"></div>
 								</ul>
 							</div>
 							<div class="clear"></div>
@@ -451,11 +409,10 @@
 		<!--<div class="modal-dialog" role="document">-->
 	</div>
 	<!--<div class="modal fade" id="modalRegister1" -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script type="text/javascript" src="angularjs.js"></script>
 	<script src="js/anime.js"></script>
 	<script src="js/charming.js"></script>
 	<script src="js/myscript.js"></script>
+	<script src="App/About.js"></script>
 </body>
 
 </html>

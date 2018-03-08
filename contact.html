@@ -61,22 +61,24 @@ function contact() {
         check1 = false;
         name1.focus();
         Err = Err + "Name can not null\n";
-    }
-    if (email1.value == "") {
-        check1 = false;
-        email1.focus();
-        Err = Err + "Email can not null\n";
-    }
-    if (mobile1.value == "") {
-        check1 = false;
-        mobile1.focus();
-        Err = Err + "Mobile can not null\n";
-    }
+    };
+        var email = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/;
+        if(!email.test(email1.value)) {
+            Err = Err + "Email can not null or Ivaild\n";
+            check1 = false;
+            email1.focus();
+        };
+        var mobile = /^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
+        if(!mobile.test(mobile1)) {
+            check1 = false;
+            mobile1.focus();
+            Err = Err + "Mobile is incorrect\n";
+        };
     if (subject1.value == "") {
         check1 = false;
         subject1.focus();
         Err = Err + "Subject can not null\n";
-    }
+    };
     if (check1 == true) {
         alert("Success");
         return true;
