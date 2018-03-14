@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="css/anime.css">
@@ -616,25 +617,42 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form ng-app="myFormApp" ng-controller="validateLogin" name="myFormLogin">
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input type="text" class="form-control" id="txtUser" placeholder="Username" name="txtUser">
+                                <span style="color:red" ng-show="myFormLogin.txtUser.$dirty && myFormLogin.txtUser.$invalid">
+                                    <span ng-show="myFormLogin.txtUser.$error.required">Username is required.</span>
+                                    </span>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input type="password" class="form-control" id="txtName" placeholder="Password">
+                                <input type="password" class="form-control" id="txtPass" placeholder="Password" name="txtPass">
+                                <span style="color:red" ng-show="myFormLogin.txtPass.$dirty && myFormLogin.txtPass.$invalid">
+                                    <span ng-show="myFormLogin.txtPass.$error.required">Password is required.</span>
+                                    </span>
                             </div>
                         </div>
                     </form>
+                    <script>
+                        var app = angular.module('myFormApp', []);
+                        app.controller('validateLogin', function($scope) {
+                            $scope.txtUser = 'Dang Tuan Huy';
+                            $scope.txtPass = '************';
+                        });
+                        </script>
                 </div>
                 <!--<div class="modal-body">-->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-warning">Login</button>
+                    <button type="submit" class="btn btn-warning"
+                    >
+                    > Login</button>
+                    <input type="submit" ng-disabled="myFormLogin.txtUser.$dirty && myFormLogin.txtUser.$invalid ||
+                    myFormLogin.txtPass.$dirty && myFormLogin.txtPass.$invalid" class="btn btn-info" />
                 </div>
                 <!--<div class="modal-footer">
 --></div>
@@ -643,7 +661,7 @@
         <!--<div class="modal-dialog" role="document">-->
     </div>
     <!--<div class="modal fade" id="modalRegister1" -->
-    f
+
 </body>
 
 </html>
