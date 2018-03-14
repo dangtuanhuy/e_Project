@@ -275,7 +275,13 @@
                         <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-7">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                                <input class="form-control" id="ex1" type="text" placeholder="Search results">
+                                <input class="form-control" id="ex1" type="text" placeholder="Search results" rel="txtTooltip" title="
+                                Enter search information" data-toggle="tooltip" data-placement="bottom">
+                                <script>
+                                        $(document).ready(function(){
+                                            $('input[rel="txtTooltip"]').tooltip();
+                                        });
+                                        </script>
                             </div>
                         </div>
                     </div>
